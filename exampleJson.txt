@@ -1,0 +1,367 @@
+{
+    "relationship":{
+        "root":{
+            "path":"default",
+            "changeState": "Changed",
+            "relations": null,
+            "identifier":"default",
+            "nodeType": "Package",
+            "classes": [
+                {   
+                    "path": "default/Main",
+                    "changeState": "Unchanged",
+                    "relations":[],
+                    "identifier":"Main",
+                    "nodeType": "Class",
+                    "classType": "Class",
+                    "methods":[],
+                    "properties":[
+                        {
+                            "path": "default/Main/enemies",
+                            "changeState": "Unchanged",
+                            "relations":[
+                                {
+                                    "targetPath": "default/Enemy",
+                                    "relationType": "Has",
+                                    "changeState": "Unchanged",
+                                    "direction": "From"
+                                }
+                            ],
+                            "identifier":"enemies",
+                            "nodeType": "ClassMember",
+                            "memberType":"Property",
+                            "identifierType":"Enemy",
+                            "visibility":"Private"
+                        },
+                        {
+                            "path": "default/Main/characters",
+                            "changeState": "Unchanged",
+                            "relations":[
+                                {
+                                    "targetPath": "default/Character",
+                                    "relationType": "Has",
+                                    "changeState": "Unchanged",
+                                    "direction": "From"
+                                }
+                            ],
+                            "identifier":"characters",
+                            "nodeType": "ClassMember",
+                            "memberType":"Property",
+                            "identifierType":"Character",
+                            "visibility":"Private"
+                        }
+                    ],
+                    "position": {
+                        "x": 150,
+                        "y": 50
+                    }
+                },
+                {   
+                    "path": "default/Character",
+                    "changeState": "Unchanged",
+                    "relations":[
+                        {
+                            "targetPath": "default/Main/characters",
+                            "relationType": "Has",
+                            "changeState": "Unchanged",
+                            "direction": "To"
+                        }
+                    ],
+                    "identifier":"Character",
+                    "nodeType": "Class",
+                    "classType": "Class",
+                    "methods":[],
+                    "properties":[
+                        {
+                            "path": "default/Character/characters",
+                            "changeState": "Unchanged",
+                            "relations":[],
+                            "identifier":"characters",
+                            "nodeType": "ClassMember",
+                            "memberType":"Property",
+                            "identifierType":"string",
+                            "visibility":"Private"
+                        }
+                    ],
+                    "position": {
+                        "x": 100,
+                        "y": 400
+                    }
+                },
+                {   
+                    "path": "default/Enemy",
+                    "changeState": "Changed",
+                    "relations":[
+                        {
+                            "targetPath": "default/Main/enemies",
+                            "relationType": "Has",
+                            "changeState": "Unchanged",
+                            "direction": "To"
+                        },
+                        {
+                            "targetPath": "default/BouncingEnemy",
+                            "relationType": "Inherits",
+                            "changeState": "Removed",
+                            "direction": "To"
+                        },
+                        {
+                            "targetPath": "default/SideEnemy",
+                            "relationType": "Inherits",
+                            "changeState": "Removed",
+                            "direction": "To"
+                        }
+                    ],
+                    "identifier":"Enemy",
+                    "nodeType": "Class",
+                    "classType": "Class",
+                    "methods":[
+                        {
+                            "path": "default/Enemy/render",
+                            "changeState": "Unchanged",
+                            "relations":[],
+                            "identifier":"render",
+                            "nodeType": "ClassMember",
+                            "memberType":"Method",
+                            "identifierType":"void", 
+                            "visibility":"Public"
+                        },
+                        {
+                            "path": "default/Enemy/update",
+                            "changeState": "Unchanged",
+                            "relations":[],
+                            "identifier":"update",
+                            "nodeType": "ClassMember",
+                            "memberType":"Method",
+                            "identifierType":"void",
+                            "visibility":"Public"
+                        }
+                    ],
+                    "properties":[
+                        {
+                            "path": "default/Enemy/x",
+                            "changeState": "Unchanged",
+                            "relations":[],
+                            "identifier":"x",
+                            "nodeType": "ClassMember",
+                            "memberType":"Property",
+                            "identifierType":"int",
+                            "visibility":"Public"
+                        },
+                        {
+                            "path": "default/Enemy/y",
+                            "changeState": "Unchanged",
+                            "relations":[],
+                            "identifier":"y",
+                            "nodeType": "ClassMember",
+                            "memberType":"Property",
+                            "identifierType":"int",
+                            "visibility":"Public"
+                        },
+                        {
+                            "path": "default/Enemy/xSpeed",
+                            "changeState": "Unchanged",
+                            "relations":[],
+                            "identifier":"xSpeed",
+                            "nodeType": "ClassMember",
+                            "memberType":"Property",
+                            "identifierType":"int",
+                            "visibility":"Public"
+                        },
+                        {
+                            "path": "default/Enemy/ySpeed",
+                            "changeState": "Unchanged",
+                            "relations":[],
+                            "identifier":"ySpeed",
+                            "nodeType": "ClassMember",
+                            "memberType":"Property",
+                            "identifierType":"int",
+                            "visibility":"Public"
+                        },
+                        {
+                            "path": "default/Enemy/size",
+                            "changeState": "Unchanged",
+                            "relations":[],
+                            "identifier":"size",
+                            "nodeType": "ClassMember",
+                            "memberType":"Property",
+                            "identifierType":"int",
+                            "visibility":"Public"
+                        },
+                        {
+                            "path": "default/Enemy/movementStrategy",
+                            "changeState": "Added",
+                            "relations":[
+                                {
+                                    "targetPath": "default/MovementStrategy",
+                                    "relationType": "Has",
+                                    "changeState": "Added",
+                                    "direction": "From"
+                                }
+                            ],
+                            "identifier":"movementStrategy",
+                            "nodeType": "ClassMember",
+                            "memberType":"Property",
+                            "identifierType":"MovementStrategy",
+                            "visibility":"Public"
+                        }
+                    ],
+                    "position": {
+                        "x": 500,
+                        "y": 100
+                    }
+                },
+                {   
+                    "path": "default/BouncingEnemy",
+                    "changeState": "Removed",
+                    "relations":[
+                        {
+                            "targetPath": "default/Enemy",
+                            "relationType": "Inherits",
+                            "changeState": "Removed",
+                            "direction": "From"
+                        }
+                    ],
+                    "identifier":"BouncingEnemy",
+                    "nodeType": "Class",
+                    "classType": "Class",
+                    "methods":[],
+                    "properties":[],
+                    "position": {
+                        "x": 350,
+                        "y": 700
+                    }
+                },
+                {   
+                    "path": "default/SideEnemy",
+                    "changeState": "Removed",
+                    "relations":[
+                        {
+                            "targetPath": "default/Enemy",
+                            "relationType": "Inherits",
+                            "changeState": "Removed",
+                            "direction": "From"
+                        }
+                    ],
+                    "identifier":"SideEnemy",
+                    "nodeType": "Class",
+                    "classType": "Class",
+                    "methods":[],
+                    "properties":[],
+                    "position": {
+                        "x": 650,
+                        "y": 700
+                    }
+                },
+                {   
+                    "path": "default/MovementStrategy",
+                    "changeState": "Added",
+                    "relations":[
+                        {
+                            "targetPath": "default/Enemy",
+                            "relationType": "Has",
+                            "changeState": "Added",
+                            "direction": "To"
+                        },
+                        {
+                            "targetPath": "default/BouncingMovement",
+                            "relationType": "Inherits",
+                            "changeState": "Added",
+                            "direction": "To"
+                        },
+                        {
+                            "targetPath": "default/SideMovement",
+                            "relationType": "Inherits",
+                            "changeState": "Added",
+                            "direction": "To"
+                        }
+                    ],
+                    "identifier":"MovementStrategy",
+                    "nodeType": "Class",
+                    "classType": "Interface",
+                    "methods":[
+                        {
+                            "path": "default/MovementStrategy/move",
+                            "changeState": "Added",
+                            "relations":[],
+                            "identifier":"move",
+                            "nodeType": "ClassMember",
+                            "memberType":"Method",
+                            "identifierType":"void", 
+                            "visibility":"Private"
+                        }
+                    ],
+                    "properties":[],
+                    "position": {
+                        "x": 1000,
+                        "y": 250
+                    }
+                },
+                {   
+                    "path": "default/BouncingMovement",
+                    "changeState": "Added",
+                    "relations":[
+                        {
+                            "targetPath": "default/MovementStrategy",
+                            "relationType": "Inherits",
+                            "changeState": "Added",
+                            "direction": "From"
+                        }
+                    ],
+                    "identifier":"BouncingMovement",
+                    "nodeType": "Class",
+                    "classType": "Class",
+                    "methods":[
+                        {
+                            "path": "default/BouncingMovement/move",
+                            "changeState": "Added",
+                            "relations":[],
+                            "identifier":"move",
+                            "nodeType": "ClassMember",
+                            "memberType":"Method",
+                            "identifierType":"void", 
+                            "visibility":"Private"
+                        }
+                    ],
+                    "properties":[],
+                    "position": {
+                        "x": 850,
+                        "y": 550
+                    }
+                },
+                {   
+                    "path": "default/SideMovement",
+                    "changeState": "Added",
+                    "relations":[
+                        {
+                            "targetPath": "default/MovementStrategy",
+                            "relationType": "Inherits",
+                            "changeState": "Added",
+                            "direction": "From"
+                        }
+                    ],
+                    "identifier":"SideMovement",
+                    "nodeType": "Class",
+                    "classType": "Class",
+                    "methods":[
+                        {
+                            "path": "default/SideMovement/move",
+                            "changeState": "Added",
+                            "relations":[],
+                            "identifier":"move",
+                            "nodeType": "ClassMember",
+                            "memberType":"Method",
+                            "identifierType":"void", 
+                            "visibility":"Private"
+                        }
+                    ],
+                    "properties":[],
+                    "position": {
+                        "x": 1150,
+                        "y": 550
+                    }
+                }
+            ], 
+            "subPackages": null
+        }
+    }
+}
